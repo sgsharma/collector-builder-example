@@ -18,6 +18,7 @@ extensions:
     endpoint: :13133
 
 service:
+  extensions: [health_check]
   pipelines:
     traces:
       receivers: [otlp]
