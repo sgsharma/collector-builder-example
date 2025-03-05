@@ -1,0 +1,18 @@
+# Modify these values to match what's needed to connect to your BP/HTP instance
+server:
+  endpoint:  ws://<YOUR HTP URL>/v1/opamp
+  headers:
+    # The 'Secret-Key ' prefix should remain 
+    Authorization: "Secret-Key <YOUR SECRET KEY>"
+
+# These should stay the same
+capabilities:
+  accepts_remote_config: true
+  reports_remote_config: true
+
+# Modify to be the path to your agent binary on disk
+agent:
+  executable: /otelcol-custom
+# Modify to wherever you'd like
+storage:
+  directory: "./local/supervisor_storage"
